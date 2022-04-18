@@ -1,8 +1,10 @@
-# LAB - Class xx
+# LAB - Class 01
 
-Project: Snakes Cafe
+Project: Snakes Cafe  
 Author: Eden  
-Links and Resources  
+
+## Links and Resources
+
 back-end server url (when applicable)  
 front-end application (when applicable)  
 
