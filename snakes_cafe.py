@@ -39,11 +39,21 @@ items = {}
 
 while True:
     order = input('> ')
+    plural_order = 'orders'
+    singular_order = 'order'
+    have = 'have'
+    has = 'has'
     if order == 'quit':
         break
     elif order not in items:
         items[order] = 0
 
     items[order] += 1
-    print(f"** {items[order]} of {order} have been added to your meal**")
+    if items[order] >1:
+        plural_order = plural_order
+        have = have
+    else:
+        plural_order = singular_order
+        have = has
+    print(f"** {items[order]} {plural_order} of {order} {have} been added to your meal**")
 
