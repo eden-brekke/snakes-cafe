@@ -1,6 +1,8 @@
 
 print('**************************************')
-print('** Welcome to the Snakes Cafe! **')
+print('**   Welcome to the Snakes Cafe!    **')
+print('**    Please See Our Menu Below     **')
+print('** To quit at any time, type "Quit" **')
 print('**************************************')
 
 
@@ -10,48 +12,52 @@ entrees = ['Salmon', 'Steak', 'Meat Tornado', 'A Literal Garden']
 desserts = ['Ice Cream', 'Cake', 'Pie']
 drinks = ['Coffee', 'Tea', 'Unicorn Tears']
 
+print('')
 print(""" Appetizers """)
-
+print("----------")
 for appetizer in appetizers:
     print(appetizer)
 
-print('**************************************')
+print('')
 print(""" Entrees """)
-
+print("----------")
 for entree in entrees:
     print(entree)
 
-print('**************************************')
+print('')
 print(""" Desserts """)
-
+print("----------")
 for dessert in desserts:
     print(dessert)
 
-print('**************************************')
+print('')
 print(""" Drinks """)
+print("----------")
 
 for drink in drinks:
     print(drink)
 
 items = {}
 
-print('**************************************')
-print('What would you like to order?')
-print('Type quit to quit at any time')
-print('**************************************')
+print('***********************************')
+print('** What would you like to order? **')
+print('***********************************')
 while True:
-    order = input('> ')
+    order = input('> ').capitalize()
     plural_order = 'orders'
     singular_order = 'order'
     have = 'have'
     has = 'has'
-    if order == 'quit':
+    if order == 'Quit':
         break
+    elif order not in desserts + appetizers + drinks + entrees:
+        print("Sorry that's not available from our menu")
+        continue
     elif order not in items:
         items[order] = 0
 
     items[order] += 1
-    if items[order] >1:
+    if items[order] > 1:
         plural_order = plural_order
         have = have
     else:
