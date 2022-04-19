@@ -3,9 +3,7 @@ print('**************************************')
 print('** Welcome to the Snakes Cafe! **')
 print('**************************************')
 
-print('What would you like to order?')
-print('Type quit to quit at any time')
-print('**************************************')
+
 
 appetizers = ['Wings', 'Cookies', 'Spring Rolls']
 entrees = ['Salmon', 'Steak', 'Meat Tornado', 'A Literal Garden']
@@ -37,6 +35,10 @@ for drink in drinks:
 
 items = {}
 
+print('**************************************')
+print('What would you like to order?')
+print('Type quit to quit at any time')
+print('**************************************')
 while True:
     order = input('> ')
     plural_order = 'orders'
